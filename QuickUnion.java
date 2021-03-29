@@ -8,7 +8,7 @@ public class QuickUnion{
             id[i] = i;
         }
 
-        private int parent(int i){
+        private int root(int i){
             while (i != id[i]){
                 i = id[i];
                 return i;
@@ -16,13 +16,13 @@ public class QuickUnion{
         }
 
         public boolean connected(int p, int q){
-            return parent(p) == parent(q);
+            return root(p) == root(q);
         }
 
 
         public void union(int q, int p){
-            int i = parent(q);
-            int j = parent(p);
+            int i = root(q);
+            int j = root(p);
             id[i] = j;
         }
     }
