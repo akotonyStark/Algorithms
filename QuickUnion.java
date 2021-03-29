@@ -1,7 +1,7 @@
 public class QuickUnion{
 
-    private int[] id;
-    private int[] sz;
+    public int[] id;
+    public int[] sz;
 
     public QuickUnion(int N){
         id = new int[N]
