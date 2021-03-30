@@ -24,4 +24,13 @@ public class LinkedQueue{
     }
   }
   
+  public String dequeue(){
+    String item = first.item;
+    first  = first.next;
+    if(isEmpty()){
+      last = null;
+      return item
+    }
+  }
+  
   
