@@ -1,6 +1,6 @@
 public class Stack{
 
-    private Stack(int N){
+    public Stack(int N){
         s = new String[N];
     }
 
