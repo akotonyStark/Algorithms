@@ -25,31 +25,3 @@ let list = new LinkedList(node1)
 
 //accessing node
 console.log(list.head.next.data)
-
-function size() {
-    let count = 0;
-    let node = this.head;
-    while (node) {
-        count++;
-        node = node.next
-    }
-    return count;
-}
-
-function clear() {
-    this.head = null;
-}
-
-function getLast() {
-    let lastNode = this.head;
-    if (lastNode) {
-        while (lastNode.next) {
-            lastNode = lastNode.next
-        }
-    }
-    return lastNode
-}
-
-function getFirst() {
-    return this.head;
-}
