@@ -11,9 +11,14 @@ class LinkedList {
     }
 }
 
-let node1 = new Node(2)
-let node2 = new Node(5)
+//create some nodes
+let node1 = new Node(9)
+let node2 = new Node(12)
+let node3 = new Node(1)
+
 node1.next = node2
+node2.next = node3
+
 
 //create linkedList
 let list = new LinkedList(node1)
