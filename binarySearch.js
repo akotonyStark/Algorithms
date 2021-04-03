@@ -25,3 +25,15 @@ let binarySearch = function(arr, x, start, end) {
 		return binarySearch(arr, x, mid+1, end);
   }		
 }
+
+// Driver code
+let arr = [2, 3, 5, 7, 8, 9,11];
+let x = 5;
+   
+if (binarySearch(arr, x, 0, arr.length-1)){
+	
+    console.log("Element found at postion", arr.indexOf(x));
+}
+else{
+	binarySearch("Element not found");
+}
