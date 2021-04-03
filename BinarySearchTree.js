@@ -70,6 +70,30 @@ insertNode(node, newNode)
 			this.insertNode(node.right,newNode);
 	}
 }
+	
+//finding a specific node
+	contains(value){
+  if(value === data){
+    return(true);
+  }
+  else if(value < data){
+    if(this.left == null){
+      return false;
+    }
+    else{
+      return this.left.contains(value)
+    }
+  }
+  else{
+    if(this.right == null){
+      return false
+    }
+    else{
+      return this.right.contains(value);
+    }
+  }
+}
+
 
     // remove(data)
                   
