@@ -93,15 +93,26 @@ insertNode(node, newNode)
     }
   }
 }
+	
+	
+	// Performs inorder traversal of a tree
+printInorder(node)
+{
+	if(node !== null)
+	{
+		this.printInorder(node.left);
+		console.log(node.data);
+		this.printInorder(node.right);
+	}
+}
 
-
-    // remove(data)
-                  
-  
-    // Helper function
+// Helper function
+    // remove(data)               
+    //insertNode(node, newNode)
+    // contains(node)
     // findMinNode()
     // getRootNode()
-    // inorder(node)
+    // printInorder(node)
     // preorder(node)               
     // postorder(node)
     // search(node, data)
