@@ -47,5 +47,8 @@ function quickSort(items, left, right) {
     return items;
 }
 
+// first call to quick sort
+var sortedArray = quickSort(items, 0, items.length - 1);
+console.log(sortedArray); 
             
   
