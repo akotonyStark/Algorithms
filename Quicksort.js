@@ -50,5 +50,51 @@ function quickSort(items, left, right) {
 // first call to quick sort
 var sortedArray = quickSort(items, 0, items.length - 1);
 console.log(sortedArray); 
+
+
+/*
+*
+*
+*
+*
+*
+*
+*
+/* a more modern approach to quicksort using the full potential of js */
+function quickSort(arr){
+  if(arr.length === 1){
+    return arr;
+  }
+
+  const pivot = arr[arr.length-1]
+  let leftArr = [];
+  let rightArr = [];
+
+//partition
+  for(let i = 0; i<arr.length-1; i++){
+    if(arr[i] < pivot){
+      leftArr.push(arr[i])  
+    }
+    else{
+      rightArr.push(arr[i])
+    }
+  }
+
+  if(leftArr.length > 0 && rightArr.length > 0){
+    console.log("there is something in left and right:", [...leftArr,...rightArr])
+    return [...quickSort(leftArr), pivot, ...quickSort(rightArr)]
+  }
+  else if(leftArr.length > 0){
+    console.log("only left arr has: ", leftArr)
+    return [...quickSort(leftArr), pivot]
+  }
+  else{
+    console.log("only right arr has:", rightArr)
+    return [pivot, ...quickSort(rightArr)]
+  }  
+}
+
+//driver code
+console.log(quickSort([9,1,2,0,7,11,4,8,22,-1]))
             
   
