@@ -67,3 +67,27 @@ function binarySearch(sortedArray, key){
 }
 
 binarySearch([1,2,3,4,6,8,9,10,90], 8)
+
+/* solution 3 */
+function binarySearch(sortedArray, key){
+
+  let midpointIndex = Math.floor(sortedArray.length/2)
+  let midpoint =  sortedArray[midpointIndex]
+
+while(sortedArray.length>=1){
+    if(key === midpoint){
+        console.log(key, " found at ", midpoint)
+    }
+    else{ 
+      let low = sortedArray.splice(0,midpointIndex);   
+      let output1 = low.filter(element => element === key)
+      
+      let high = sortedArray
+      let output2 = high.filter(element => element === key)
+      output1.length ===0 ? console.log(output2, " found in second half") : console.log(output1, " found in first half")
+    }
+  break;
+} 
+
+}
+binarySearch([1,2,3,4,6,8,9,10,90], 8)
