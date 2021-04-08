@@ -37,3 +37,33 @@ if (binarySearch(arr, x, 0, arr.length-1)){
 else{
 	binarySearch("Element not found");
 }
+
+
+
+/* solution 2 */
+function binarySearch(sortedArray, key){
+
+  let midpointIndex = Math.floor(sortedArray.length/2)
+  let midpoint =  sortedArray[midpointIndex]
+
+  if(key === midpoint){
+    console.log(key, " found at ", midpoint)
+  }
+  else{    
+    for(let i=0; i<midpointIndex; i++){
+        if(sortedArray[i] === key){
+          console.log(key, " found at ",i)
+          break;
+        }  
+    }
+
+    for(let j=midpointIndex; j<sortedArray.length-1; j++){
+        if(sortedArray[j] === key){
+        console.log(key, " found at position",j)
+      }
+     }
+  }
+
+}
+
+binarySearch([1,2,3,4,6,8,9,10,90], 8)
