@@ -24,24 +24,22 @@ console.log(bubbleSort([2,1,5,8]))
 
 
 /* solution two */
-let bubbleSort = (inputArr) => {
-    let len = inputArr.length;
-    let checked;
-    do {
-        //set flag to false on start
-        checked = false;
-        for (let i = 0; i < len; i++) {
-            if (inputArr[i] > inputArr[i + 1]) {
-                let tmp = inputArr[i];
-                inputArr[i] = inputArr[i + 1];
-                inputArr[i + 1] = tmp;
-                //if swap occurs, set flag to true
-                checked = true;
-            }
-        }
-    } while (checked);
-    return inputArr;
- };
+let arr = [2,5,8,3,9,4,1,-1,6]
+
+let sorted = false
+for(let j=0; j<arr.length-1; j++){
+  for(let i=0; i<arr.length-1; i++){
+    if(arr[i] < arr[i+1]){
+      sorted = true
+    }
+    else{
+      let temp = arr[i]
+      arr[i] = arr[i+1]
+      arr[i+1] = temp 
+    }
+  }
+}
+console.log(arr)
 
 //solution three
 
