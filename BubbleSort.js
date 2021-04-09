@@ -43,3 +43,25 @@ let bubbleSort = (inputArr) => {
     return inputArr;
  };
 
+//solution three
+
+let array = [2,1,5,-1,7,8,14,0,9]
+  function bubbleSort(array){
+    let i = 0;
+    for(let index = 0; index < array.length-1; index++){
+      for(let i = 0; i<array.length-1; i++){
+               let a = array[i] 
+               let b = array[i+1]
+               if(a > b){
+                 let temp = array[i]
+                 array[i] = array[i+1]
+                 array[i+1] = temp
+               }  
+              }
+    }
+    return array
+}
+
+console.log(bubbleSort(array))
+console.log(bubbleSort([2,1,5,8]))
+
