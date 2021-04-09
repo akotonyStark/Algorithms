@@ -47,7 +47,7 @@ let bubbleSort = (inputArr) => {
 
 let array = [2,1,5,-1,7,8,14,0,9]
   function bubbleSort(array){
-    let i = 0;
+  
     for(let index = 0; index < array.length-1; index++){
       for(let i = 0; i<array.length-1; i++){
                let a = array[i] 
