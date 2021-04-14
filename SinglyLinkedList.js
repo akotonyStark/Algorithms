@@ -73,3 +73,15 @@ function getFirst() {
 function deleteNode(node){
   node.next = null
 }
+
+
+//insert node at tail
+function insertNodeAtTail(data){
+  let curr = head
+  let newNode = new Node(data)
+    while(curr.next !== null){
+        curr = curr.next
+    }
+    curr.next = newNode   
+ return head
+}
