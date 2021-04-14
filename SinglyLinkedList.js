@@ -36,6 +36,21 @@ function size() {
     return count;
 }
 
+//getting node count from head node
+function getNodeCount(head){
+  let count = 1
+  let curr = head
+  if(head.next == null){
+    return 1
+  }
+
+  while(curr.next != null){
+    curr = curr.next
+    count++
+  }
+  return count
+}
+
 function clear() {
     this.head = null;
 }
