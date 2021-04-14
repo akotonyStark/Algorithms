@@ -68,3 +68,8 @@ function getLast() {
 function getFirst() {
     return this.head;
 }
+
+//deleting is the simplest
+function deleteNode(node){
+  node.next = null
+}
