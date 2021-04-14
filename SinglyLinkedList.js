@@ -77,6 +77,10 @@ function deleteNode(node){
 
 //insert node at tail
 function insertNodeAtTail(data){
+  //check if head is the only node
+  if(head == null){
+    return node
+  }
   let curr = head
   let newNode = new Node(data)
     while(curr.next !== null){
