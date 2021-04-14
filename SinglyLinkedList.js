@@ -89,3 +89,12 @@ function insertNodeAtTail(data){
     curr.next = newNode   
  return head
 }
+
+
+//insert node at head
+function insertNodeAtHead(head,data){
+  let newNode = new Node(data)
+  newNode.next = head
+  newNode.data = data 
+  return newNode
+}
