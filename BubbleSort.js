@@ -27,7 +27,7 @@ console.log(bubbleSort([2,1,5,8]))
 let arr = [2,5,8,3,9,4,1,-1,6]
 
 let sorted = false
-for(let j=0; j<arr.length-1; j++){
+for(let j=0; j<arr.length; j++){
   for(let i=0; i<arr.length-1; i++){
     if(arr[i] < arr[i+1]){
       sorted = true
@@ -46,7 +46,7 @@ console.log(arr)
 let array = [2,1,5,-1,7,8,14,0,9]
   function bubbleSort(array){
   
-    for(let index = 0; index < array.length-1; index++){
+    for(let index = 0; index < array.length; index++){
       for(let i = 0; i<array.length-1; i++){
                let a = array[i] 
                let b = array[i+1]
