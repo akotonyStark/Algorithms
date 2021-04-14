@@ -39,6 +39,13 @@ function mergeSort(arr){
   for(let i=middleIndex; i<=arr.length-1; i++){
     rightArr.push(arr[i])
   }
+  
+  /*
+  the split could be done with a slice function
+  leftArr = arr.slice(0,middleIndex)
+  rightArr = arr.slice(middleIndex)
+  
+  */
 
   return merge(mergeSort(leftArr), mergeSort(rightArr))
   //console.log(leftArr, rightArr)
