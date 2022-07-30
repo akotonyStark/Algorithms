@@ -1,6 +1,6 @@
 /* optimal solution */
 const arr = [37,45,29,8]
-
+let noswaps = true
 for(let i=arr.length; i>0; i--){
   for(let j=0; j<i-1; j++){
     console.log(arr, arr[j], arr[j+1])
@@ -8,11 +8,16 @@ for(let i=arr.length; i>0; i--){
       let temp = arr[j]
       arr[j] = arr[j+1]
       arr[j+1] = temp
+      noswaps = false
     }
+  }
+  if(noswaps){
+    break;
   }
 }
 
 console.log(arr)
+
 
 /* solution one */
 
